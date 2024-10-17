@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.material3.Button
 import androidx.compose.material3.Checkbox
+import androidx.compose.material3.ColorScheme
 import androidx.compose.material3.Slider
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -30,16 +31,18 @@ import androidx.compose.ui.unit.sp
 
 
 
-// ToDo 3: Make the UI look better by adding a gradient background (vertical) and padding
+// ToDo 3: DONE Make the UI look better by adding a gradient background (vertical) and padding
 
 @Composable
 fun Screen3() {
     var sliderValue by remember { mutableStateOf(0.5f) }
     var chkd by remember { mutableStateOf(true) }
 
+    val brushColor = arrayOf(0.0f to Color.Yellow, 0.5f to Color.LightGray, 1f to Color.White)
 
     val context = LocalContext.current
-    Column ( modifier = Modifier.padding(horizontal = 20.dp).fillMaxSize(),
+    Column ( modifier = Modifier.padding(horizontal = 20.dp).fillMaxSize()
+        .background(Brush.verticalGradient(colorStops = brushColor)),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally){
         Slider(value = sliderValue, onValueChange = { sliderValue=it }, Modifier.fillMaxWidth()
