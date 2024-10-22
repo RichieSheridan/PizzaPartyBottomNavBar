@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+   Sample data extraction rules file; uncomment and customize as necessary.
+   See https://developer.android.com/about/versions/12/backup-restore#xml-changes
+   for details.
+-->
+<data-extraction-rules>
+    <cloud-backup>
+        <!-- TODO: Use <include> and <exclude> to control what is backed up.
+            I'm sorry professor I'm not sure what to put here, I believe this file controls holding user data and gives memory to the app
+            I believe we can link a file and have it so it saves here as a sort of cache or memory, though I don't know how to implement it.
+
+            My best guess after researching it would look like:
+            <include domain="file" path="shared_prefs/my_app_preferences.xml"/>
+            <exclude domain="file" path="cache name/"/>
+            though this isn't working.
+
+        <include .../>
+        <exclude .../>
+        -->
+    </cloud-backup>
+    <!--
+    <device-transfer>
+        <include .../>
+        <exclude .../>
+    </device-transfer>
+    -->
+</data-extraction-rules>
